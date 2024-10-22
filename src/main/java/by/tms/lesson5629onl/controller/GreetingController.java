@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
     @GetMapping
-    public ResponseEntity<Greeting> greeting(@RequestParam(name = "name", defaultValue = "Guest") String name) {
+    public ResponseEntity<Greeting> greeting(@RequestParam(name = "name", defaultValue = "Ivan") String name) {
 
         String message = "Hello %s!".formatted(name);
 
