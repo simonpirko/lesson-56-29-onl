@@ -6,4 +6,5 @@ RUN mvn clean package -DskipTests=true
 
 FROM openjdk:17-jdk-slim AS build-image
 COPY --from=build /app/target/*.jar /app.jar
+LABEL com.centurylinklabs.watchtower.enable="true"
 ENTRYPOINT ["java", "-jar", "/app.jar"]
